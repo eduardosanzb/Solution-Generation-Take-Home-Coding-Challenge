@@ -31,9 +31,8 @@ var options = {
 var geocoder = (0, _nodeGeocoder2.default)(options);
 
 var stores = loadJsonFile();
-stores = stores.slice(0, 1);
+stores = stores; //.slice(0,1)
 
-var storesChecked = [];
 var storesToCheck = [].concat(_toConsumableArray(stores));
 
 fetching(storesToCheck);

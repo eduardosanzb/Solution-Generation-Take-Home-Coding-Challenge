@@ -50,8 +50,9 @@
     "multi-geocoder": "^0.1.6",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
-    "react-google-maps": "^4.11.0",
+    "react-google-maps": "^6.0.1",
     "react-redux": "^5.0.2",
+    "react-streetview": "^1.0.1",
     "redux": "^3.6.0",
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.1.0"

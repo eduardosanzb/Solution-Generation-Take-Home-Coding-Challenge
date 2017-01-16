@@ -31,9 +31,8 @@ const options = {
 let geocoder = NodeGeocoder(options);
 
 let stores = loadJsonFile()
-stores = stores.slice(0,1)
+stores = stores//.slice(0,1)
 
-let storesChecked = []
 let storesToCheck = [...stores]
 
 fetching(storesToCheck)
