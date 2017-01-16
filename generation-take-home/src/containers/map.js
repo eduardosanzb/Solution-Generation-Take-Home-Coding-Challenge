@@ -47,7 +47,7 @@ class TheMap extends Component {
 							key={marker._id}
 							icon={marker.icon}
 							onClick={() => this.onClickMarker(marker)}>
-							{marker.showInfo &&(
+							{!marker.favorite && marker.showInfo &&(
 								<InfoWindow onCloseclick={() => this.onCloseMarker(marker)}>
 									<div>
 										<StoreCard 

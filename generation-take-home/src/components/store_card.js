@@ -1,10 +1,19 @@
 import React from 'react'
+import ReactStreetView from 'react-streetview'
+
 
 const StoreCard = (props) => {
 	const {marker, onAddFavorite, onCancelClick} = props
+	const {latitude: lat, longitude: lon} = marker.geocode[0]
+	const API_KEY = 'AIzaSyCVH8e45o3d-5qmykzdhGKd1-3xYua5D2A'
+			const streetViewsOptions = {
+				position: {lat, lng:lon},
+				pov: {heading:100, pitch:0},
+				zoom:0
+			}
 	return (
 		<div className="card">
-			<img className="card-img-top" style={style} src="https://vw-squattypotty.storage.googleapis.com/uploads/2015/04/07/images/SquattyPotty-Retailers-Target.jpg" />
+			<div className="card-img-top"><div style={styleToImg}><ReactStreetView apiKey={API_KEY} streetViewPanoramaOptions={streetViewsOptions}/></div></div>
 			<div className="card-block">
 				<h6>{marker.name}</h6>
 				<button className="btn btn-primary btn-sm" onClick={onAddFavorite}>Agregar a Favoritos!</button>
@@ -17,5 +26,9 @@ const StoreCard = (props) => {
 
 const style = {
 	width: 320
+}
+const styleToImg = {
+	height: 200,
+	width: 300
 }
 export default StoreCard

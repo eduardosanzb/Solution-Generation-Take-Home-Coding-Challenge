@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { unselectFavorite } from '../actions'
 import GoogleMap from '../components/google-map'
-import ReactStreetView from 'react-streetview'
-import ReactList from 'react-list';
 
 
 class FavoritesList extends Component {
@@ -15,16 +13,9 @@ class FavoritesList extends Component {
 	renderFavorites() {
 		return this.props.favorites.map((store, index) => {
 			const {latitude: lat, longitude: lon} = store.geocode[0]
-			const API_KEY = 'AIzaSyCVH8e45o3d-5qmykzdhGKd1-3xYua5D2A'
-			const streetViewsOptions = {
-				position: {lat, lng:lon},
-				pov: {heading:100, pitch:0},
-				zoom:0
-			}
 			return (
 				<li key={store._id} className="list-group-item media">
-					<div className="media-left"><div style={style}><GoogleMap lon={lon} lat={lat} /></div></div>
-					<div className="media-left"><div style={style}><ReactStreetView apiKey={API_KEY} streetViewPanoramaOptions={streetViewsOptions}/></div></div>
+					<div className="media-left"><div style={style}><GoogleMap lon={lon} lat={lat}></GoogleMap></div></div>
 					<div className="media-body">
 						<h6>{`#${index+1}: `}{store.name}</h6>
 						<p>{store.address}</p>
@@ -35,6 +26,8 @@ class FavoritesList extends Component {
 			)
 		})
 	}
+
+	
 	render() {
 		if (!this.props.favorites.length) {
 			return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import {GoogleMapLoader, GoogleMap} from 'react-google-maps'
+import {GoogleMapLoader, GoogleMap, Marker} from 'react-google-maps'
 
 export default (props) => {
 	const {lat, lon:lng} = props
@@ -7,7 +7,9 @@ export default (props) => {
 		<GoogleMapLoader 
 			containerElement={<div style={{ height: '100%' }}/>}
 			googleMapElement={
-				<GoogleMap defaultZoom={12} defaultCenter={{lat, lng}}/>
+				<GoogleMap defaultZoom={15} defaultCenter={{lat, lng}}>
+					<Marker position={{ lat, lng }}/>
+				</GoogleMap>
 			}
 		/>
 	)
