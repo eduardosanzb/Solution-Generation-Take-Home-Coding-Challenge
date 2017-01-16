@@ -30,4 +30,6 @@ Also, there is a POST service, Cuz maybe I will attach the functionality to add 
 
 [SERVER for the generation stores](https://github.com/eduardosanzb/Solution-Generation-Take-Home-Coding-Challenge/tree/master/server)
 
-
+This service is running in a small server I have for testing.
+http://dalet.tk:5000/
+http://dalet.tk:5000/api/locations => to fetch all the locations json
