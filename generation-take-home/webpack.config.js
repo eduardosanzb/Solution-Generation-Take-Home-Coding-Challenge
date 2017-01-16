@@ -1,8 +1,9 @@
+
 var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  devtool: 'source-map',
+  devtool: 'eval',
   entry: [
     'babel-polyfill',
     'webpack-dev-server/client?http://localhost:3000',
@@ -10,19 +11,12 @@ module.exports = {
     './src/index'
   ],
   output: {
-    path: path.join(__dirname, 'public'),
+    path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/public/'
+    publicPath: '/static/'
   },
   plugins: [
-    //new webpack.HotModuleReplacementPlugin(),
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      minimize: true,
-      compress: {
-        warnings: false
-      }
-    })
+    new webpack.HotModuleReplacementPlugin()
   ],
   module: {
     loaders: [{

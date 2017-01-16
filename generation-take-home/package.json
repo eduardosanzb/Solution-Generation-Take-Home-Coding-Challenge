@@ -52,7 +52,7 @@
     "multi-geocoder": "^0.1.6",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
-    "react-google-maps": "^6.0.1",
+    "react-google-maps": "^4.11.0",
     "react-list": "^0.8.3",
     "react-redux": "^5.0.2",
     "react-streetview": "^1.0.1",

@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { fetchMarkers, selectFavorite } from '../actions/index'
 import { GoogleMapLoader, GoogleMap, Marker, InfoWindow } from 'react-google-maps'
 import StoreCard from '../components/store_card'
-
 class TheMap extends Component {
 	constructor(props) {
 		super(props)
