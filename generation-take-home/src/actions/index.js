@@ -1,5 +1,5 @@
 import axios from 'axios'
-const URL_LOCATIONS = 'http://localhost:5000/api/locations'
+const URL_LOCATIONS = 'http://dalet.tk:5000/api/locations'
 
 export const ACTIONS_TYPES = {
 	FETCH_MARKERS: 'FETCH_MARKERS',

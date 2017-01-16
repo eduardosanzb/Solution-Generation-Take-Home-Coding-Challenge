@@ -12,6 +12,10 @@ import apiController from './controllers/api.controller'
 let port = process.env.port || 5000
 let app = express()
 app.use(cors())
+app.use('/public', express.static(`${config.root}/public`))
+app.get('/', (req, res) => {
+	res.sendFile(__dirname+'/public/index.html')
+})
 mongoose.connect(config.mongo.uri, config.mongo.options)
 mongoose.Promise = Promise
 apiController(app)

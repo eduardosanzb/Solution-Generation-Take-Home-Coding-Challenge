@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { unselectFavorite } from '../actions'
 import GoogleMap from '../components/google-map'
 import ReactStreetView from 'react-streetview'
+import ReactList from 'react-list';
 
 
 class FavoritesList extends Component {
@@ -10,8 +11,9 @@ class FavoritesList extends Component {
 	removeFavorite(store) {
 		this.props.unselectFavorite(store)
 	}
+
 	renderFavorites() {
-		return this.props.favorites.map(store => {
+		return this.props.favorites.map((store, index) => {
 			const {latitude: lat, longitude: lon} = store.geocode[0]
 			const API_KEY = 'AIzaSyCVH8e45o3d-5qmykzdhGKd1-3xYua5D2A'
 			const streetViewsOptions = {
@@ -24,7 +26,7 @@ class FavoritesList extends Component {
 					<div className="media-left"><div style={style}><GoogleMap lon={lon} lat={lat} /></div></div>
 					<div className="media-left"><div style={style}><ReactStreetView apiKey={API_KEY} streetViewPanoramaOptions={streetViewsOptions}/></div></div>
 					<div className="media-body">
-						<h6>{store.name}</h6>
+						<h6>{`#${index+1}: `}{store.name}</h6>
 						<p>{store.address}</p>
 						<a className="btn btn-primary btn-xs" href={`http://maps.google.com/maps?q=${lat},${lon}`} target="_blank">Direcciones</a>
 						<button className="btn btn-danger btn-xs" onClick={() => this.props.unselectFavorite(store)}>Eliminar</button>
@@ -45,11 +47,10 @@ class FavoritesList extends Component {
 		}
 		return (
 			<div className="list-container" >
-				<h3>Tiendas Favoritas</h3>
-				<ul className="list-group">
+				<h3>Tiendas Favoritas: {this.props.favorites.length}</h3>
+				<ul style={{overflow:'auto', maxHeight:600}}>
 					{this.renderFavorites()}
 				</ul>
-
 			</div>
 
 		)
