@@ -1,7 +1,7 @@
 Solution: Generation Take-Home Coding Challenge
 =================================
 This is my approach to solve the Coding Challenge from Generation.
-I will use react/redux, because I'm starting to learning, and this is an excellent exercise.
+I will use react/redux, because I'm starting to learn, and this is an excellent exercise.
 
 My first step was to analyze the user stories and mockup a friendly solution.
 
