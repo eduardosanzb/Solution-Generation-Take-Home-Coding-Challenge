@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { unselectFavorite } from '../actions'
 import GoogleMap from '../components/google-map'
+import ReactCSSGroupList from 'react-addons-css-transition-group'
 
 
 class FavoritesList extends Component {
@@ -29,6 +30,11 @@ class FavoritesList extends Component {
 
 	
 	render() {
+		const transitionOptions = {
+			transitionName: 'fade',
+			transitionEnterTimeout: 500,
+			transitionLeaveTimeout: 500
+		}
 		if (!this.props.favorites.length) {
 			return (
 				<div className="list-container" >
@@ -42,7 +48,9 @@ class FavoritesList extends Component {
 			<div className="list-container" >
 				<h3>Tiendas Favoritas: {this.props.favorites.length}</h3>
 				<ul style={{overflow:'auto', maxHeight:600}}>
+				<ReactCSSGroupList {...transitionOptions}>
 					{this.renderFavorites()}
+				</ReactCSSGroupList>
 				</ul>
 			</div>
 

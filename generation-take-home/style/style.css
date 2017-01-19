@@ -24,3 +24,22 @@ button {
 	border: 1px solid #ddd;
 	border-radius: 4px;
 }
+
+/* starting state of animation */
+.fade-enter {
+	opacity: 0;
+}
+/* en state of animatino*/
+.fade-enter-active {
+	opacity: 1.0;
+	transition: .5s ease-in all;
+}
+
+.fade-leave {
+	opacity: 1.0;
+}
+
+.fade-leave-active {
+	opacity: 0;
+	transition: .5s ease-out all;
+}

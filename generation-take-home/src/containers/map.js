@@ -6,6 +6,7 @@ import StoreCard from '../components/store_card'
 class TheMap extends Component {
 	constructor(props) {
 		super(props)
+		this.firstTime = true
 		this.state = {}
 	}
 	componentWillMount() {
@@ -14,6 +15,7 @@ class TheMap extends Component {
 	componentWillReceiveProps(nextprops){
 		this.setState({markers: nextprops.markers})
 	}
+
 	onClickMarker(marker) {
 		this.setState({
 			markers:this.state.markers.map(m => {
