@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 	res.sendFile(__dirname+'/public/index.html')
 })
 mongoose.connect(config.mongo.uri, config.mongo.options)
-mongoose.Promise = Promise
+mongoose.Promise = require('bluebird')
 apiController(app)
 app.listen(port)
 

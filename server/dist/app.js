@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
 	res.sendFile(__dirname + '/public/index.html');
 });
 _mongoose2.default.connect(_config2.default.mongo.uri, _config2.default.mongo.options);
-_mongoose2.default.Promise = Promise;
+_mongoose2.default.Promise = require('bluebird');
 (0, _api2.default)(app);
 app.listen(port);
 
