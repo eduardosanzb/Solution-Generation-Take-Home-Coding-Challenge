@@ -1,0 +1,45 @@
+p {
+	font-size: 12px;
+}
+h6 {
+	font-size: 16px;
+}
+
+button {
+	margin-left: 5px !important;
+}
+
+.list-container {
+	margin-top: 10px;
+	margin-left: 10px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.map-container {
+	margin-left: 20px;
+	margin-top: 10px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+/* starting state of animation */
+.fade-enter {
+	opacity: 0;
+}
+/* en state of animatino*/
+.fade-enter-active {
+	opacity: 1.0;
+	transition: .5s ease-in all;
+}
+
+.fade-leave {
+	opacity: 1.0;
+}
+
+.fade-leave-active {
+	opacity: 0;
+	transition: .5s ease-out all;
+}
