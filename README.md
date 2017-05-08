@@ -39,10 +39,12 @@ Keep in mind:
 
 ## Steps to run
 
-1. cd server && npm i && npm run build && cd ..
+1. `cd server && npm i && npm run build && cd .`
+	
 	1.1 in other terminal, inside server/. Run `node dist/index.js`
-2. cd frontend && npm i
-3. npm start
+
+2. `cd frontend && npm `
+3. `npm start`
 
 
 
