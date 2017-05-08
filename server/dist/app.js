@@ -34,14 +34,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 let port = process.env.port || 5000;
 let app = (0, _express2.default)();
 app.use((0, _cors2.default)());
-app.use('/public', _express2.default.static(`${ _config2.default.root }/public`));
-app.get('/', (req, res) => {
-	res.sendFile(__dirname + '/public/index.html');
-});
 _mongoose2.default.connect(_config2.default.mongo.uri, _config2.default.mongo.options);
 _mongoose2.default.Promise = require('bluebird');
 (0, _api2.default)(app);
+console.log(`Running in port ${port}`);
 app.listen(port);
 
 exports = module.exports = app;
-//# sourceMappingURL=app.js.map

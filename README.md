@@ -25,19 +25,24 @@ afterwards we will paint the markers.
 To to that, I approach by creating a node utility, that read all the stores, and geolocated with the API. After that, I saved those locations
 in a json.
 
-I want to fetch those locations to the _react app_ by a service, so I created a simple express server, to send those locations.
+I want to fetch those locations to give the user a better experience to the _react app_ by a service, so I created a simple express server, to send those locations.
+
 Also, there is a POST service, Cuz maybe I will attach the functionality to add more stores to the app. Was not in the requirements tho.
 
 [SERVER for the generation stores](https://github.com/eduardosanzb/Solution-Generation-Take-Home-Coding-Challenge/tree/master/server)
 
-This service is running in a small server I have for testing.
+You must run the [SERVER for the generation stores](https://github.com/eduardosanzb/Solution-Generation-Take-Home-Coding-Challenge/tree/master/server)
 
-http://dalet.tk:5000/
+Keep in mind: 
+1. Must have a mongod instance.
+2. Create a database called generation
 
-http://dalet.tk:5000/api/locations => to fetch all the locations json
+## Steps to run
 
-If the server is down, you can run an instance in [SERVER for the generation stores](https://github.com/eduardosanzb/Solution-Generation-Take-Home-Coding-Challenge/tree/master/server)
-running `node dist/index.js`, but you have to change the url in the [action_creators](https://github.com/eduardosanzb/Solution-Generation-Take-Home-Coding-Challenge/blob/master/generation-take-home/src/actions/index.js)
-`const URL_LOCATIONS = 'http://localhost:5000/api/locations'`
+1. cd server && npm i && npm run build && cd ..
+	1.1 in other terminal, inside server/. Run `node dist/index.js`
+2. cd generation-take-home && npm i
+3. npm start
+
 
 

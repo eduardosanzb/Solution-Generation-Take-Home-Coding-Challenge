@@ -9,7 +9,7 @@ exports.default = function () {
 		if (err) throw err;
 		console.log('Collection cleaned');
 	});
-	_markers2.default.map(location => {
+	_markers2.default.markers.map(location => {
 		const { name, address, geocode = [] } = location;
 
 		let newLocation = new _location2.default({ name, address, geocode });
@@ -29,4 +29,5 @@ var _markers = require('./markers');
 var _markers2 = _interopRequireDefault(_markers);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-//# sourceMappingURL=fill-locations.js.map
+
+console.log(_markers2.default);

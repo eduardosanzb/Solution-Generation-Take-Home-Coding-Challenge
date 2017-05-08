@@ -11,7 +11,7 @@ var _config2 = _interopRequireDefault(_config);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = {
-    root: _path2.default.normalize(`${ __dirname }/../..`),
+    root: _path2.default.normalize(`${__dirname}/../..`),
     getDbConnectionString: function () {},
     mongo: {
         uri: 'mongodb://localhost/generation',
@@ -22,4 +22,3 @@ module.exports = {
         }
     }
 };
-//# sourceMappingURL=index.js.map

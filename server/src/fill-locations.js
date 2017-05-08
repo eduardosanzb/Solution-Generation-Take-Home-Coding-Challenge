@@ -1,12 +1,13 @@
 import Locations from './models/location.model'
 import theLocations from './markers'
+console.log(theLocations)
 
 export default function () {
 	Locations.remove({}, (err, res) => {
 		if(err) throw err;
 		console.log('Collection cleaned');
 	})
-	theLocations.map(location => {
+	theLocations.markers.map(location => {
 		const {name, address, geocode=[]} = location
 		
 		let newLocation = new Locations({ name, address, geocode })

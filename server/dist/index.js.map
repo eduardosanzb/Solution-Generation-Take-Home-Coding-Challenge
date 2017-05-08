@@ -1,1 +1,0 @@
-{"version":3,"sources":["../src/index.js"],"names":["exports","module","require"],"mappings":"AAAA;;AAGA;;AACAA,UAAUC,OAAOD,OAAP,GAAiBE,QAAQ,OAAR,CAA3B","file":"index.js","sourcesContent":["'use strict';\n\n\n// Export the application\nexports = module.exports = require('./app');\n"]}

@@ -18,4 +18,3 @@ let locationSchema = new schema({
     geocode: [schema.Types.Mixed]
 });
 exports.default = _mongoose2.default.model('Locations', locationSchema);
-//# sourceMappingURL=location.model.js.map
