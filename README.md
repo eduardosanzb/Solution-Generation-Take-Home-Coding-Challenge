@@ -5,7 +5,7 @@ I will use react/redux, because I'm starting to learn, and this is an excellent 
 
 My first step was to analyze the user stories and mockup a friendly solution.
 
-![mockup](https://github.com/eduardosanzb/Solution-Generation-Take-Home-Coding-Challenge/blob/master/generation-take-home/Screen%20Shot%202017-01-16%20at%203.21.35%20AM.png?raw=true)
+![mockup](https://github.com/eduardosanzb/Solution-Generation-Take-Home-Coding-Challenge/blob/master/frontend/Screen%20Shot%202017-01-16%20at%203.21.35%20AM.png?raw=true)
 
 After the creation of the mockup, I defined the components/containers to create.
  * Global App __Component__. _Already provided by the challenge_.
